@@ -31,21 +31,29 @@
         var moeda; //variavel das moedas
         var placar; //variavel para exibicao do placar
         var pontuacao = 0; //variavel que registra a pontuacao do jogo
+        var images = [];
 
         // Instanciando um novo jogo Phaser
         const game = new Phaser.Game(config);
 
+       //imagens usadas
+       images[0] = 'assets/bg.png';
+       images[1] = 'assets/turbo.png';
+       images[2] = 'assets/alienigena.png';
+       images[3] = 'assets/tijolos.png';
+       images[4] = 'assets/moeda.png';
+
         function preload() {
             //preload das imagens
-            this.load.image('background', 'assets/bg.png'); //carrega background
+            this.load.image('background', images[0]); //carrega background
 
-            this.load.image('turbo','assets/turbo.png'); //carrega a imagem do turbo
+            this.load.image('turbo',images[1]); //carrega a imagem do turbo
 
-            this.load.image('player','assets/alienigena.png'); //carrega a imagem do alien
+            this.load.image('player', images[2]); //carrega a imagem do alien
 
-            this.load.image('plataforma','assets/tijolos.png'); //carrega a imagem das plataformas
+            this.load.image('plataforma', images[3]); //carrega a imagem das plataformas
 
-            this.load.image('moeda','assets/moeda.png'); //carrega a imagem da moeda
+            this.load.image('moeda', images[4]); //carrega a imagem da moeda
         }
 
         function create() {
